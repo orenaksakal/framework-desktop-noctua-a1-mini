@@ -1,0 +1,26 @@
+[
+  {
+    "part": "A",
+    "rotation_deg": 45,
+    "projected_bed_footprint_mm": [
+      171.52142768231803,
+      171.44067442871219
+    ]
+  },
+  {
+    "part": "B",
+    "rotation_deg": 0,
+    "projected_bed_footprint_mm": [
+      170.64999199108885,
+      34.9999999921875
+    ]
+  },
+  {
+    "part": "C",
+    "rotation_deg": 0,
+    "projected_bed_footprint_mm": [
+      170.64999199108885,
+      165.40016461199951
+    ]
+  }
+]

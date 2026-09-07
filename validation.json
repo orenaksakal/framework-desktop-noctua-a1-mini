@@ -1,0 +1,178 @@
+{
+  "units": "mm",
+  "source": {
+    "framework_desktop_noctua_side_panel.stl": "8598de0878f10a25456e25c395e93d413a8853f5c97345d990844e97d5be90b2",
+    "framework_desktop_noctua_side_panel_duct.stl": "d77e9cf036259092432544a155f604462ecc320c186938f0cb5e05551d9ceb27"
+  },
+  "parts": {
+    "01_panel_A_logo_strip.stl": {
+      "size_mm": [
+        171.440673828125,
+        171.52142333984375,
+        6.9499969482421875
+      ],
+      "volume_mm3": 17703.34957037648,
+      "watertight": true,
+      "consistent_winding": true,
+      "solid_components": 1,
+      "triangles": 13314,
+      "sha256": "2d4f70c93453100e69edefb56864f059cf0c5330e006198a681c06207f7d6679"
+    },
+    "02_panel_B_upper_strip.stl": {
+      "size_mm": [
+        170.64999389648438,
+        35.0,
+        6.899993896484375
+      ],
+      "volume_mm3": 15758.702735808549,
+      "watertight": true,
+      "consistent_winding": true,
+      "solid_components": 1,
+      "triangles": 4208,
+      "sha256": "608148dc0b735451797bc889540c35ea0b69892ab2d6d11aa8a3492b96564f6a"
+    },
+    "03_panel_C_main_grille.stl": {
+      "size_mm": [
+        170.64999389648438,
+        165.40016174316406,
+        5.899993896484375
+      ],
+      "volume_mm3": 54216.57649814325,
+      "watertight": true,
+      "consistent_winding": true,
+      "solid_components": 1,
+      "triangles": 47430,
+      "sha256": "fdebd828046ee4f39767eaf719a4c42be3ece6db99c0410a3554975a3d0e33fd"
+    },
+    "04_duct_whole.stl": {
+      "size_mm": [
+        128.99949645996094,
+        129.0,
+        8.200004577636719
+      ],
+      "volume_mm3": 15781.894906181917,
+      "watertight": true,
+      "consistent_winding": true,
+      "solid_components": 1,
+      "triangles": 77498,
+      "sha256": "39a85bb5a8c429141520030f329a380fc93e2ee77b9c71cffd95871adf2cd977"
+    },
+    "05_keys_standard_PRINT_ONCE_8_keys.stl": {
+      "size_mm": [
+        91.60000610351562,
+        27.469707489013672,
+        0.800000011920929
+      ],
+      "volume_mm3": 1121.059974965551,
+      "watertight": true,
+      "consistent_winding": true,
+      "solid_components": 8,
+      "triangles": 224,
+      "sha256": "27bac3dbe9da01c54183153148edd0e0366bf185e400bf0b505c5fa872ad3302"
+    },
+    "00_PRINT_FIRST_joint_test.stl": {
+      "size_mm": [
+        34.0,
+        37.73485565185547,
+        2.7999954223632812
+      ],
+      "volume_mm3": 1117.5036466636502,
+      "watertight": true,
+      "consistent_winding": true,
+      "solid_components": 3,
+      "triangles": 280,
+      "sha256": "a42fee62cb1d2afdedba155f56a73de05203dd52ea25bd27a9fceeaa9b49215b"
+    },
+    "optional_keys/key_snug_0.10mm_clearance.stl": {
+      "size_mm": [
+        19.799999237060547,
+        11.734853744506836,
+        0.800000011920929
+      ],
+      "volume_mm3": 145.22830758686885,
+      "watertight": true,
+      "consistent_winding": true,
+      "solid_components": 1,
+      "triangles": 28,
+      "sha256": "6e22acb616fb705248f3ab658a9d6102b41c0a8a4ef8f6de8b94a66c8b3e9aa5"
+    },
+    "optional_keys/key_loose_0.30mm_clearance.stl": {
+      "size_mm": [
+        19.399999618530273,
+        11.204562187194824,
+        0.800000011920929
+      ],
+      "volume_mm3": 135.1125730974493,
+      "watertight": true,
+      "consistent_winding": true,
+      "solid_components": 1,
+      "triangles": 28,
+      "sha256": "07db2150e5b9f5dbee883dcf204c9dbc872e601a91fd87efb3c9a0e1f36813d7"
+    }
+  },
+  "checks": {
+    "source_watertight": true,
+    "main_grille_region_entire_depth_unchanged": true,
+    "mounting_features_beyond_2_81mm_depth_unchanged": true,
+    "exterior_first_0_9mm_unchanged": true,
+    "panel_parts_reassemble_without_volume_loss": true,
+    "no_keys_protrude_beyond_original_panel": true,
+    "keys_do_not_collide_with_panel": true,
+    "minimum_solid_skin_before_pocketing_mm": 1.95,
+    "original_panel_volume_mm3": 89776.98943239996,
+    "removed_pocket_volume_mm3": 2098.36080684184,
+    "source_to_print_transform_determinant": 1.0
+  },
+  "joint": {
+    "pocket_floor_depth": 1.0,
+    "key_thickness": 0.8,
+    "key_side_clearance": 0.2,
+    "key_installed_depth": [
+      1.1,
+      1.9
+    ],
+    "count": 8,
+    "locations_drawing_uv_rotation": [
+      [
+        45,
+        15,
+        0
+      ],
+      [
+        45,
+        55,
+        0
+      ],
+      [
+        45,
+        95,
+        0
+      ],
+      [
+        45,
+        135,
+        0
+      ],
+      [
+        45,
+        175,
+        0
+      ],
+      [
+        80,
+        35,
+        90
+      ],
+      [
+        130,
+        35,
+        90
+      ],
+      [
+        180,
+        35,
+        90
+      ]
+    ]
+  }
+}
