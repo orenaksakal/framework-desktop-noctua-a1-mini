@@ -1,5 +1,13 @@
 # Framework Desktop Noctua mod for the Bambu Lab A1 mini
 
+## Glue-free alternative (V2)
+
+A new **experimental glue-free revision** is available in [glue-free-v2](glue-free-v2/README.md). It uses sliding dovetail keys with release tongues. Print its two small PETG joint tests before the full panels. The V1 files below remain unchanged and still require glue. V2 adds up to 2 mm locally on the inside; case clearance and physical latch performance require testing.
+
+[Download the glue-free V2 STL bundle](downloads/noctua-a1-mini-glue-free-v2-STLs.zip) · [V2 assembly instructions](glue-free-v2/README.md)
+
+## Original glued version (V1)
+
 Three-piece Noctua side panel with eight concealed glue-in butterfly keys, plus the original one-piece duct, prepared for the A1 mini's 180 × 180 mm bed. Designed for PETG and a 0.4 mm nozzle.
 
 **Start with [the print and assembly guide](START_HERE.md) and the small joint test.** All six main files passed mesh and Bambu Studio slicing checks. Physical fit, joint strength, long-term heat resistance and acoustic/thermal performance have not been tested. The duct remains Noctua's original geometry; G2 seating must be checked on the hardware.
@@ -20,7 +28,7 @@ Three-piece Noctua side panel with eight concealed glue-in butterfly keys, plus 
 - `originals/`: the exact Noctua-named input files used, with hashes recorded in `validation.json`.
 - `engineering/`: generator, dependency requirements and verified process overrides.
 - `planning/`: original feasibility diagram, measurements and planning notes; final printing instructions take precedence.
-- `downloads/`: the original prepared print bundle from this task.
+- `downloads/`: separate V1 glued and V2 glue-free print bundles.
 
 ![First-layer toolpaths](slicer-preview.png)
 

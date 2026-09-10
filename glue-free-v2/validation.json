@@ -1,0 +1,174 @@
+{
+  "status": "EXPERIMENTAL: print joint coupons before full panels",
+  "source_panel_sha256": "8598de0878f10a25456e25c395e93d413a8853f5c97345d990844e97d5be90b2",
+  "joint_origins_uv_angle_deg": [
+    [
+      45.0,
+      12.0,
+      0.0
+    ],
+    [
+      45.0,
+      45.0,
+      0.0
+    ],
+    [
+      45.0,
+      85.0,
+      0.0
+    ],
+    [
+      45.0,
+      125.0,
+      0.0
+    ],
+    [
+      45.0,
+      165.0,
+      0.0
+    ],
+    [
+      80.0,
+      35.0,
+      90.0
+    ],
+    [
+      130.0,
+      35.0,
+      90.0
+    ],
+    [
+      180.0,
+      35.0,
+      90.0
+    ]
+  ],
+  "slide_distance_mm": 10,
+  "checks": {
+    "unflexed_reverse_motion_collision_mm3": 0.13500000111758714,
+    "upward_removal_collision_mm3": 6.560000074165195,
+    "left_half_pull_apart_collision_mm3": 2.6100000197227526,
+    "right_half_pull_apart_collision_mm3": 2.6100000197227526,
+    "installed_keys_do_not_collide_with_each_other": true,
+    "main_grille_unchanged": true,
+    "exterior_first_0_9_mm_unchanged": true,
+    "original_mounting_protrusions_retained": true,
+    "assembled_parts_partition_without_volume_loss": true,
+    "all_8_keys_clear_panel_when_locked": true,
+    "rigid_slide_sweep_samples_per_joint": 21,
+    "vertical_loading_samples_per_joint": 11,
+    "deflected_tongue_sweep_samples": 41,
+    "deflected_tongue_tip_displacement_mm": 0.7,
+    "motion_check_is_geometric_not_FEA": true,
+    "STL_export_simplification_max_surface_movement_mm": 0.001,
+    "maximum_depth_from_exterior_mm": 4.0,
+    "maximum_added_depth_over_2mm_skin_mm": 2.0,
+    "physical_case_clearance_unverified": true
+  },
+  "files": {
+    "01_panel_A_glue_free.stl": {
+      "size_mm": [
+        171.4405975341797,
+        171.52142333984375,
+        6.9499969482421875
+      ],
+      "components": 1,
+      "triangles": 11354,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_mm3": 17869.448413379574,
+      "sha256": "cfd24673cba02dbe819a9a26b3c7f9b17a1bf7fe9fe565edf46e8f41996fa55d"
+    },
+    "02_panel_B_glue_free.stl": {
+      "size_mm": [
+        170.64999389648438,
+        35.0,
+        6.899993896484375
+      ],
+      "components": 1,
+      "triangles": 3442,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_mm3": 15783.202567913666,
+      "sha256": "92e74c3e06d5f0418ffc4c5b78964d1b2359870f2041c43894e866141cd8fd0f"
+    },
+    "03_panel_C_glue_free.stl": {
+      "size_mm": [
+        170.64999389648438,
+        165.39967346191406,
+        5.899993896484375
+      ],
+      "components": 1,
+      "triangles": 42694,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_mm3": 54335.94789043005,
+      "sha256": "8fe47f307e5034440ce57b6f2effcb93734650a56ca32fa3449783ed9d1cb7aa"
+    },
+    "04_sliding_keys_PRINT_ONCE_8_keys.stl": {
+      "size_mm": [
+        91.0,
+        42.599998474121094,
+        2.799999952316284
+      ],
+      "components": 8,
+      "triangles": 1104,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_mm3": 1776.154325897305,
+      "sha256": "56b6074322edc118e1745a82b214347e004a30eb18016bfb076aa8fe491d8727"
+    },
+    "00a_PRINT_FIRST_receiver_halves.stl": {
+      "size_mm": [
+        34.0,
+        24.0,
+        4.0
+      ],
+      "components": 2,
+      "triangles": 360,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_mm3": 1281.8462827963713,
+      "sha256": "378478a3cfedcdf79db0377a3195103f8405ffb3d3931683c77300ead47732a6"
+    },
+    "00b_PRINT_FIRST_sliding_key.stl": {
+      "size_mm": [
+        19.0,
+        14.600000381469727,
+        2.799999952316284
+      ],
+      "components": 1,
+      "triangles": 138,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_mm3": 222.0193655206035,
+      "sha256": "4ee969de4ea8de384156bccb142adb3c5c268a4d62c330125b227b000dadb98b"
+    },
+    "optional_key_snug.stl": {
+      "size_mm": [
+        19.200000762939453,
+        14.600000381469727,
+        2.799999952316284
+      ],
+      "components": 1,
+      "triangles": 142,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_mm3": 230.37933036816557,
+      "sha256": "ecba62760956d138fa21ed440268879db377e7c4cd288041f25f68d71cbfaccd"
+    },
+    "optional_key_loose.stl": {
+      "size_mm": [
+        18.799999237060547,
+        14.600000381469727,
+        2.799999952316284
+      ],
+      "components": 1,
+      "triangles": 160,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_mm3": 214.25934478772288,
+      "sha256": "065ca1a3ee4d4059f0885b30a49e11d0b9e3102f4e4da69ce84d9c6dc1b80317"
+    }
+  }
+}

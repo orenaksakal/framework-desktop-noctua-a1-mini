@@ -1,0 +1,14 @@
+{
+  "size_mm": [
+    128.99949645996094,
+    129.0,
+    8.200004577636719
+  ],
+  "volume_mm3": 15781.894906181917,
+  "watertight": true,
+  "consistent_winding": true,
+  "solid_components": 1,
+  "triangles": 77498,
+  "sha256": "39a85bb5a8c429141520030f329a380fc93e2ee77b9c71cffd95871adf2cd977",
+  "source": "../04_duct_whole.stl (V1, copied without geometry changes)"
+}

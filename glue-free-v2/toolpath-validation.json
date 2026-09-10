@@ -1,0 +1,114 @@
+[
+  {
+    "file": "00a_PRINT_FIRST_receiver_halves.stl",
+    "model_support_brim_extrusion_bounds_mm": [
+      [
+        76.25,
+        71.25
+      ],
+      [
+        103.75,
+        108.75
+      ]
+    ],
+    "inside_A1_mini_bed": true
+  },
+  {
+    "file": "00b_PRINT_FIRST_sliding_key.stl",
+    "model_support_brim_extrusion_bounds_mm": [
+      [
+        80.95,
+        80.15
+      ],
+      [
+        99.05,
+        99.85
+      ]
+    ],
+    "inside_A1_mini_bed": true
+  },
+  {
+    "file": "01_panel_A_glue_free.stl",
+    "model_support_brim_extrusion_bounds_mm": [
+      [
+        1.489,
+        3.291
+      ],
+      [
+        176.71,
+        177.409
+      ]
+    ],
+    "inside_A1_mini_bed": true
+  },
+  {
+    "file": "02_panel_B_glue_free.stl",
+    "model_support_brim_extrusion_bounds_mm": [
+      [
+        70.889,
+        2.925
+      ],
+      [
+        109.25,
+        176.936
+      ]
+    ],
+    "inside_A1_mini_bed": true
+  },
+  {
+    "file": "03_panel_C_glue_free.stl",
+    "model_support_brim_extrusion_bounds_mm": [
+      [
+        2.925,
+        6.615
+      ],
+      [
+        176.936,
+        174.45
+      ]
+    ],
+    "inside_A1_mini_bed": true
+  },
+  {
+    "file": "04_sliding_keys_PRINT_ONCE_8_keys.stl",
+    "model_support_brim_extrusion_bounds_mm": [
+      [
+        66.95,
+        44.15
+      ],
+      [
+        113.05,
+        135.85
+      ]
+    ],
+    "inside_A1_mini_bed": true
+  },
+  {
+    "file": "optional_key_loose.stl",
+    "model_support_brim_extrusion_bounds_mm": [
+      [
+        80.95,
+        80.15
+      ],
+      [
+        99.05,
+        99.85
+      ]
+    ],
+    "inside_A1_mini_bed": true
+  },
+  {
+    "file": "optional_key_snug.stl",
+    "model_support_brim_extrusion_bounds_mm": [
+      [
+        80.95,
+        80.05
+      ],
+      [
+        99.05,
+        99.95
+      ]
+    ],
+    "inside_A1_mini_bed": true
+  }
+]
