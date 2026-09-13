@@ -1,4 +1,5 @@
 {
+  "revision": "3.1",
   "status": "PROTOTYPE: physical glued sample required",
   "source_panel_sha256": "8598de0878f10a25456e25c395e93d413a8853f5c97345d990844e97d5be90b2",
   "checks": {
@@ -7,17 +8,21 @@
     "within_original_envelope": true,
     "main_grille_region_unchanged": true,
     "original_mounting_protrusions_retained": true,
-    "original_skin_slice_0_25_to_0_39_mm_retained": true,
+    "original_skin_slice_0_24_to_1_00_mm_retained": true,
+    "minimum_backing_at_lap_recess_mm": 0.76,
     "export_simplification_tolerance_mm": 0.001,
     "exterior_unchanged_outside_decorative_channels": true,
     "minimum_skin_under_key_at_groove_mm": 0.76,
     "glue_keys_fit_without_collision": true,
     "groove_opening_mm": 0.8,
     "groove_depth_mm": 0.24,
-    "lip_projection_mm": 1.4,
+    "lip_projection_mm": 0.8,
     "lap_vertical_clearance_mm": 0.2,
-    "lap_end_clearance_mm": 1.6,
-    "added_internal_thickness_mm": 0
+    "lap_end_clearance_mm": 1.0,
+    "added_internal_thickness_mm": 0,
+    "exported_mesh_missing_backing_volume_mm3": 0.0505906587372435,
+    "exported_mesh_backing_volume_tolerance_mm3": 0.1,
+    "exported_parts_max_overlap_mm3": 4.995328925977867e-05
   },
   "key_locations": [
     [
@@ -121,6 +126,32 @@
   ],
   "files": {
     "01_panel_A_logo_strip.stl": {
+      "design_to_print_transform": [
+        [
+          0.7071067811865476,
+          0.7071067811865475,
+          0.0,
+          -2.08303886681938
+        ],
+        [
+          0.7071067811865475,
+          -0.7071067811865476,
+          0.0,
+          139.70162455335318
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
       "size_mm": [
         171.4405975341797,
         171.52142333984375,
@@ -129,20 +160,72 @@
       "solid_components": 1,
       "watertight": true,
       "consistent_winding": true,
-      "sha256": "5fe8be9170b9a6c1f555b59cb05c5e111d99c9acc437326ce1c73da06c6ade99"
+      "sha256": "f3c02419c0cd80fa85e44c7fc439a18e88c923833d97c92ef55ff8906597e128"
     },
     "02_panel_B_upper_strip.stl": {
+      "design_to_print_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -45.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          35.79999923706055
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
       "size_mm": [
         170.64999389648438,
-        36.400001525878906,
+        35.79999923706055,
         6.899993896484375
       ],
       "solid_components": 1,
       "watertight": true,
       "consistent_winding": true,
-      "sha256": "8ade2b63cc3a7f6ba797ff14c54ff580122a76497226ff2b9954722e991597fd"
+      "sha256": "969733640927b8d8d24c6f82b8ab715dc10b20d083dc2b1ec833d94a636a846b"
     },
     "03_panel_C_main_grille.stl": {
+      "design_to_print_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -45.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          200.39967346191406
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
       "size_mm": [
         170.64999389648438,
         165.39967346191406,
@@ -151,20 +234,72 @@
       "solid_components": 1,
       "watertight": true,
       "consistent_winding": true,
-      "sha256": "4bde438e1c908617b7a52a9ec994bc91591ceb6cc83013bb4b80a8d5dce4504f"
+      "sha256": "82578782944362533a9308d6a01ee23047d71a9f2c452e4e7b1ebb0e43b61a4f"
     },
     "00_PRINT_FIRST_framed_glued_joint.stl": {
-      "size_mm": [
-        34.0,
-        51.73485565185547,
-        2.7999954223632812
+      "design_to_print_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          51.73485565185547
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
       ],
-      "solid_components": 3,
+      "size_mm": [
+        51.0,
+        51.73485565185547,
+        5.899993896484375
+      ],
+      "solid_components": 4,
       "watertight": true,
       "consistent_winding": true,
-      "sha256": "ee05f4dbf142c5e4b1133f5be6c1029c0e163bce7a99d675947c0b9b9bc2341e"
+      "sha256": "bfbbf43353983f8b7cca09bfca96d1ae2bbe0d58db9873c3987a54965a3697f9"
     },
     "05_keys_standard_PRINT_ONCE_8_keys.stl": {
+      "design_to_print_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          9.800000190734863
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          5.734854221343994
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
       "size_mm": [
         91.60000610351562,
         27.469707489013672,

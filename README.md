@@ -1,10 +1,10 @@
 # Framework Desktop Noctua mod for the Bambu Lab A1 mini
 
-## Glued framed version (V3)
+## Glued framed version (V3.1)
 
-The latest glued revision puts the joins inside shallow decorative grooves and adds concealed alignment lips. **Print its small PETG sample first** (about 17 minutes / 2.7 g). No extra internal thickness; physical appearance, strength and fit still need testing.
+The latest glued revision puts the joins inside shallow decorative grooves and adds concealed alignment lips. **Print its small PETG sample first** (about 22 minutes / 3.8 g). V3.1 corrects a thin backing section in the initial V3 laps; use all three revised panel pieces together. No extra internal thickness; physical appearance, strength and fit still need testing.
 
-[Download the V3 STL bundle](downloads/noctua-a1-mini-glued-framed-v3-STLs.zip) · [V3 printing and assembly guide](glued-framed-v3/README.md)
+[Download the V3.1 STL bundle](downloads/noctua-a1-mini-glued-framed-v3.1-STLs.zip) · [V3 printing and assembly guide](glued-framed-v3/README.md)
 
 ![V3 panel and joint](glued-framed-v3/design-and-joint.png)
 

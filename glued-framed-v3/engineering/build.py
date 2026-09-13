@@ -1,4 +1,4 @@
-"""Glued framed V3. Independent Noctua remix, CC BY-NC-SA 4.0. Units mm.
+"""Glued framed V3.1. Independent Noctua remix, CC BY-NC-SA 4.0. Units mm.
 Physical seam appearance, fit, strength and thermal performance are unverified.
 """
 from pathlib import Path
@@ -6,9 +6,12 @@ import json,hashlib,math,argparse,shutil
 import numpy as np,trimesh,manifold3d as md
 from shapely.geometry import Polygon
 from shapely.geometry.polygon import orient
-HERE=Path(__file__).resolve().parent; OUT=HERE.parent; ROOT=OUT.parent
+HERE=Path(__file__).resolve().parent; ROOT=HERE.parent.parent
+parser=argparse.ArgumentParser();parser.add_argument('--reference-dir',type=Path);parser.add_argument('--out-dir',type=Path,default=HERE.parent);args=parser.parse_args()
+OUT=args.out_dir;OUT.mkdir(parents=True,exist_ok=True)
 T=np.array([[1,0,0,233.55294799804688],[0,0,-1,185.2586669921875],[0,-1,0,104.08545684814453],[0,0,0,1.]])
 F=np.diag([1.,-1.,1.,1.])
+assert abs(np.linalg.det((F@T)[:3,:3])-1)<1e-9
 def box(x0,x1,y0,y1,z0,z1):return md.Manifold.cube([x1-x0,y1-y0,z1-z0]).translate([x0,y0,z0])
 def union(s):return md.Manifold.batch_boolean(s,md.OpType.Add)
 def solid(m):return md.Manifold(md.Mesh(np.asarray(m.vertices,dtype=np.float32),np.asarray(m.faces,dtype=np.uint32)))
@@ -40,8 +43,8 @@ C,B=R.split_by_plane([0,1,0],35)
 parts={'A':A,'B':B,'C':C}
 # Short open-back scarf laps. The male underside grows at 45 degrees in face-down printing.
 # Female recess remains open inward: these align and overlap; glue is still required.
-male=xz([(-.6,.6),(0,.6),(1.4,2),(-.6,2)],-5,5)
-female=xz([(0,.4),(1.6,2),(1.6,9),(0,9)],-6.6,6.6)
+male=xz([(-.6,1.2),(0,1.2),(.8,2),(-.6,2)],-5,5)
+female=xz([(0,1),(1,2),(1,9),(0,9)],-6,6)
 laps=[(45,29,0,'A','B'),(45,77,0,'A','C'),(45,117,0,'A','C'),(45,157,0,'A','C'),(45,191,0,'A','C'),
       (106,35,90,'B','C'),(156,35,90,'B','C'),(199,35,90,'B','C')]
 # 90 degrees maps local +X into global +Y: B overlaps into C.
@@ -72,9 +75,10 @@ mounts=original^box(-1,220,-1,205,2.81,9)
 assert (mounts-assembled).volume()<.01
 checks['original_mounting_protrusions_retained']=True
 # A continuous original slice remains behind every decorative groove.
-skin=original^box(-1,220,-1,205,.25,.39)
+skin=original^box(-1,220,-1,205,.24,1.0)
 assert (skin-assembled).volume()<.001
-checks['original_skin_slice_0_25_to_0_39_mm_retained']=True
+checks['original_skin_slice_0_24_to_1_00_mm_retained']=True
+checks['minimum_backing_at_lap_recess_mm']=.76
 checks['export_simplification_tolerance_mm']=.001
 # Outer surfaces differ only where the deliberately recessed channels were cut.
 outer=box(-1,220,-1,205,-.1,.39)
@@ -89,29 +93,44 @@ for x,y,a in keys_at:
 checks['minimum_skin_under_key_at_groove_mm']=.76
 checks['glue_keys_fit_without_collision']=True
 checks['groove_opening_mm']=.8;checks['groove_depth_mm']=.24
-checks['lip_projection_mm']=1.4;checks['lap_vertical_clearance_mm']=.2
-checks['lap_end_clearance_mm']=1.6;checks['added_internal_thickness_mm']=0
+checks['lip_projection_mm']=.8;checks['lap_vertical_clearance_mm']=.2
+checks['lap_end_clearance_mm']=1.0;checks['added_internal_thickness_mm']=0
 files={}
 def save(name,s,reflect=True,angle=0,expected=1):
- t=mesh(s)
- if reflect:t.apply_transform(F)
- if angle:t.apply_transform(trimesh.transformations.rotation_matrix(math.radians(angle),[0,0,1]))
- t.apply_translation(-t.bounds[0]);p=OUT/(name+'.stl');t.export(p)
+ t=mesh(s);transform=np.eye(4)
+ if reflect:transform=F@transform
+ if angle:transform=trimesh.transformations.rotation_matrix(math.radians(angle),[0,0,1])@transform
+ t.apply_transform(transform)
+ shift=trimesh.transformations.translation_matrix(-t.bounds[0]);t.apply_transform(shift);transform=shift@transform
+ p=OUT/(name+'.stl');t.export(p)
  t=trimesh.load(p);ss=solid(t)
  assert t.is_watertight and t.is_winding_consistent and t.volume>0 and str(ss.status())=='Error.NoError',name
  assert len(ss.decompose())==expected,(name,len(ss.decompose()))
  assert np.all(t.extents<=np.array([176,176,180])),(name,t.extents)
- files[p.name]={'size_mm':t.extents.tolist(),'solid_components':expected,'watertight':True,'consistent_winding':True,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
+ files[p.name]={'design_to_print_transform':transform.tolist(),'size_mm':t.extents.tolist(),'solid_components':expected,'watertight':True,'consistent_winding':True,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
 for letter,label in [('A','logo_strip'),('B','upper_strip'),('C','main_grille')]:save(f'0{ord(letter)-64}_panel_{letter}_{label}',parts[letter],angle=45 if letter=='A' else 0)
+# Validate the assembled exported meshes, after reversing their exact print transforms.
+roundtrip=[]
+for name,info in files.items():
+ t=trimesh.load(OUT/name);t.apply_transform(np.linalg.inv(np.array(info['design_to_print_transform'])))
+ roundtrip.append(solid(t))
+exported=union(roundtrip)
+missing_backing=(skin-exported).volume()
+assert missing_backing<.1,missing_backing
+checks['exported_mesh_missing_backing_volume_mm3']=missing_backing
+checks['exported_mesh_backing_volume_tolerance_mm3']=.1
+checks['exported_parts_max_overlap_mm3']=max((a^b).volume() for i,a in enumerate(roundtrip) for b in roundtrip[i+1:])
+assert checks['exported_parts_max_overlap_mm3']<.01
 # Coupon includes actual vertical seam, lip at y77 and glue key at y95.
 l=parts['A']^box(31,47,68,105,0,9);r=parts['C']^box(45,59,68,105,0,9)
-save('00_PRINT_FIRST_framed_glued_joint',union([l.translate([-31,-68,0]),r.translate([-25,-68,0]),key().translate([17,46,0])]),expected=3)
+# An unbroken piece from the decorative right-hand border is a finish comparator.
+control=(original-grooves)^box(205,214,68,105,0,9)
+save('00_PRINT_FIRST_framed_glued_joint',union([l.translate([-31,-68,0]),r.translate([-25,-68,0]),key().translate([17,46,0]),control.translate([-163,-68,0])]),expected=4)
 save('05_keys_standard_PRINT_ONCE_8_keys',union([key().translate([24*(i%4),16*(i//4),0]) for i in range(8)]),reflect=False,expected=8)
 shutil.copy2(ROOT/'04_duct_whole.stl',OUT/'04_duct_unchanged.stl')
 files['04_duct_unchanged.stl']={'sha256':hashlib.sha256((OUT/'04_duct_unchanged.stl').read_bytes()).hexdigest(),'unchanged_from':'../04_duct_whole.stl'}
-(OUT/'validation.json').write_text(json.dumps({'status':'PROTOTYPE: physical glued sample required','source_panel_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'checks':checks,'key_locations':keys_at,'lap_locations':laps,'files':files},indent=2))
-parser=argparse.ArgumentParser();parser.add_argument('--reference-dir',type=Path);args=parser.parse_args()
+(OUT/'validation.json').write_text(json.dumps({'revision':'3.1','status':'PROTOTYPE: physical glued sample required','source_panel_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'checks':checks,'key_locations':keys_at,'lap_locations':laps,'files':files},indent=2))
 if args.reference_dir:
  args.reference_dir.mkdir(parents=True,exist_ok=True)
- for name,s in [('assembly',assembled),('coupon_left',l),('coupon_right',r),('original',original)]:mesh(s).export(args.reference_dir/(name+'.stl'))
+ for name,s in [('assembly',assembled),('coupon_left',l),('coupon_right',r),('original',original),('groove_control',control)]:mesh(s).export(args.reference_dir/(name+'.stl'))
 print(json.dumps(files,indent=2))
