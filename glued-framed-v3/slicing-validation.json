@@ -1,0 +1,134 @@
+[
+  {
+    "file": "00_PRINT_FIRST_framed_glued_joint.stl",
+    "sha256": "ee05f4dbf142c5e4b1133f5be6c1029c0e163bce7a99d675947c0b9b9bc2341e",
+    "exit_code": 0,
+    "supports_enabled": false,
+    "header": [
+      "; BambuStudio 02.07.01.62",
+      "; model printing time: 10m 35s; total estimated time: 16m 59s",
+      "; total layer number: 17",
+      "; total filament length [mm] : 877.33",
+      "; total filament volume [cm^3] : 2110.24",
+      "; total filament weight [g] : 2.70",
+      "; filament_density: 1.28",
+      "; filament_diameter: 1.75",
+      "; max_z_height: 2.76",
+      "; filament: 1"
+    ],
+    "warnings": [
+      "[2026-09-13 12:21:44.611423] [0x00000001f219a180] [warning] cli mode, Current BambuStudio Version 02.07.01.62",
+      "[2026-09-13 12:21:44.614230] [0x00000001f219a180] [warning] no filament colors found in projects"
+    ]
+  },
+  {
+    "file": "01_panel_A_logo_strip.stl",
+    "sha256": "5fe8be9170b9a6c1f555b59cb05c5e111d99c9acc437326ce1c73da06c6ade99",
+    "exit_code": 0,
+    "supports_enabled": true,
+    "header": [
+      "; BambuStudio 02.07.01.62",
+      "; model printing time: 56m 47s; total estimated time: 1h 3m 11s",
+      "; total layer number: 61",
+      "; total filament length [mm] : 6972.12",
+      "; total filament volume [cm^3] : 16769.92",
+      "; total filament weight [g] : 21.47",
+      "; filament_density: 1.28",
+      "; filament_diameter: 1.75",
+      "; max_z_height: 6.92",
+      "; filament: 1"
+    ],
+    "warnings": [
+      "[2026-09-13 12:21:44.783740] [0x00000001f219a180] [warning] cli mode, Current BambuStudio Version 02.07.01.62",
+      "[2026-09-13 12:21:44.791394] [0x00000001f219a180] [warning] no filament colors found in projects"
+    ]
+  },
+  {
+    "file": "02_panel_B_upper_strip.stl",
+    "sha256": "8ade2b63cc3a7f6ba797ff14c54ff580122a76497226ff2b9954722e991597fd",
+    "exit_code": 0,
+    "supports_enabled": true,
+    "header": [
+      "; BambuStudio 02.07.01.62",
+      "; model printing time: 41m 47s; total estimated time: 48m 11s",
+      "; total layer number: 50",
+      "; total filament length [mm] : 5386.35",
+      "; total filament volume [cm^3] : 12955.69",
+      "; total filament weight [g] : 16.58",
+      "; filament_density: 1.28",
+      "; filament_diameter: 1.75",
+      "; max_z_height: 6.92",
+      "; filament: 1"
+    ],
+    "warnings": [
+      "[2026-09-13 12:21:45.330971] [0x00000001f219a180] [warning] cli mode, Current BambuStudio Version 02.07.01.62",
+      "[2026-09-13 12:21:45.334781] [0x00000001f219a180] [warning] no filament colors found in projects"
+    ]
+  },
+  {
+    "file": "03_panel_C_main_grille.stl",
+    "sha256": "4bde438e1c908617b7a52a9ec994bc91591ceb6cc83013bb4b80a8d5dce4504f",
+    "exit_code": 0,
+    "supports_enabled": true,
+    "header": [
+      "; BambuStudio 02.07.01.62",
+      "; model printing time: 2h 53m 39s; total estimated time: 3h 0m 3s",
+      "; total layer number: 43",
+      "; total filament length [mm] : 18836.97",
+      "; total filament volume [cm^3] : 45308.21",
+      "; total filament weight [g] : 57.99",
+      "; filament_density: 1.28",
+      "; filament_diameter: 1.75",
+      "; max_z_height: 5.96",
+      "; filament: 1"
+    ],
+    "warnings": [
+      "[2026-09-13 12:21:45.570274] [0x00000001f219a180] [warning] cli mode, Current BambuStudio Version 02.07.01.62",
+      "[2026-09-13 12:21:45.587750] [0x00000001f219a180] [warning] no filament colors found in projects"
+    ]
+  },
+  {
+    "file": "04_duct_unchanged.stl",
+    "sha256": "39a85bb5a8c429141520030f329a380fc93e2ee77b9c71cffd95871adf2cd977",
+    "exit_code": 0,
+    "supports_enabled": true,
+    "header": [
+      "; BambuStudio 02.07.01.62",
+      "; model printing time: 1h 0m 31s; total estimated time: 1h 6m 55s",
+      "; total layer number: 51",
+      "; total filament length [mm] : 6212.12",
+      "; total filament volume [cm^3] : 14941.91",
+      "; total filament weight [g] : 19.13",
+      "; filament_density: 1.28",
+      "; filament_diameter: 1.75",
+      "; max_z_height: 8.20",
+      "; filament: 1"
+    ],
+    "warnings": [
+      "[2026-09-13 12:21:48.194217] [0x00000001f219a180] [warning] cli mode, Current BambuStudio Version 02.07.01.62",
+      "[2026-09-13 12:21:48.231317] [0x00000001f219a180] [warning] no filament colors found in projects"
+    ]
+  },
+  {
+    "file": "05_keys_standard_PRINT_ONCE_8_keys.stl",
+    "sha256": "27bac3dbe9da01c54183153148edd0e0366bf185e400bf0b505c5fa872ad3302",
+    "exit_code": 0,
+    "supports_enabled": false,
+    "header": [
+      "; BambuStudio 02.07.01.62",
+      "; model printing time: 8m 38s; total estimated time: 15m 2s",
+      "; total layer number: 5",
+      "; total filament length [mm] : 555.66",
+      "; total filament volume [cm^3] : 1336.53",
+      "; total filament weight [g] : 1.71",
+      "; filament_density: 1.28",
+      "; filament_diameter: 1.75",
+      "; max_z_height: 0.84",
+      "; filament: 1"
+    ],
+    "warnings": [
+      "[2026-09-13 12:21:49.024055] [0x00000001f219a180] [warning] cli mode, Current BambuStudio Version 02.07.01.62",
+      "[2026-09-13 12:21:49.025803] [0x00000001f219a180] [warning] no filament colors found in projects"
+    ]
+  }
+]

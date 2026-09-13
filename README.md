@@ -1,5 +1,13 @@
 # Framework Desktop Noctua mod for the Bambu Lab A1 mini
 
+## Glued framed version (V3)
+
+The latest glued revision puts the joins inside shallow decorative grooves and adds concealed alignment lips. **Print its small PETG sample first** (about 17 minutes / 2.7 g). No extra internal thickness; physical appearance, strength and fit still need testing.
+
+[Download the V3 STL bundle](downloads/noctua-a1-mini-glued-framed-v3-STLs.zip) · [V3 printing and assembly guide](glued-framed-v3/README.md)
+
+![V3 panel and joint](glued-framed-v3/design-and-joint.png)
+
 ## Glue-free alternative (V2)
 
 A new **experimental glue-free revision** is available in [glue-free-v2](glue-free-v2/README.md). It uses sliding dovetail keys with release tongues. Print its two small PETG joint tests before the full panels. The V1 files below remain unchanged and still require glue. V2 adds up to 2 mm locally on the inside; case clearance and physical latch performance require testing.
@@ -28,7 +36,7 @@ Three-piece Noctua side panel with eight concealed glue-in butterfly keys, plus 
 - `originals/`: the exact Noctua-named input files used, with hashes recorded in `validation.json`.
 - `engineering/`: generator, dependency requirements and verified process overrides.
 - `planning/`: original feasibility diagram, measurements and planning notes; final printing instructions take precedence.
-- `downloads/`: separate V1 glued and V2 glue-free print bundles.
+- `downloads/`: separate V1 glued, V2 glue-free and V3 framed/glued print bundles.
 
 ![First-layer toolpaths](slicer-preview.png)
 

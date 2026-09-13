@@ -1,0 +1,86 @@
+[
+  {
+    "file": "00_PRINT_FIRST_framed_glued_joint.stl",
+    "model_support_brim_extrusion_bounds_mm": [
+      [
+        71.25,
+        62.383
+      ],
+      [
+        108.75,
+        117.61
+      ]
+    ],
+    "inside_A1_mini_bed": true
+  },
+  {
+    "file": "01_panel_A_logo_strip.stl",
+    "model_support_brim_extrusion_bounds_mm": [
+      [
+        1.373,
+        3.258
+      ],
+      [
+        176.383,
+        177.163
+      ]
+    ],
+    "inside_A1_mini_bed": true
+  },
+  {
+    "file": "02_panel_B_upper_strip.stl",
+    "model_support_brim_extrusion_bounds_mm": [
+      [
+        71.75,
+        3.064
+      ],
+      [
+        109.811,
+        176.775
+      ]
+    ],
+    "inside_A1_mini_bed": true
+  },
+  {
+    "file": "03_panel_C_main_grille.stl",
+    "model_support_brim_extrusion_bounds_mm": [
+      [
+        3.225,
+        6.614
+      ],
+      [
+        176.936,
+        174.15
+      ]
+    ],
+    "inside_A1_mini_bed": true
+  },
+  {
+    "file": "04_duct_unchanged.stl",
+    "model_support_brim_extrusion_bounds_mm": [
+      [
+        25.141,
+        25.14
+      ],
+      [
+        154.86,
+        154.859
+      ]
+    ],
+    "inside_A1_mini_bed": true
+  },
+  {
+    "file": "05_keys_standard_PRINT_ONCE_8_keys.stl",
+    "model_support_brim_extrusion_bounds_mm": [
+      [
+        74.523,
+        42.45
+      ],
+      [
+        105.477,
+        137.55
+      ]
+    ],
+    "inside_A1_mini_bed": true
+  }
+]
